@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2956551A12CDAD00BEEE64 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2956541A12CDAD00BEEE64 /* Feed.m */; };
+		2A2956591A12DB3A00BEEE64 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2956571A12DB3A00BEEE64 /* ModalViewController.m */; };
+		2A29565A1A12DB3A00BEEE64 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2956581A12DB3A00BEEE64 /* ModalViewController.xib */; };
 		2A4F60AF1A0C410900A6E577 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F60AE1A0C410900A6E577 /* main.m */; };
 		2A4F60B21A0C410900A6E577 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F60B11A0C410900A6E577 /* AppDelegate.m */; };
 		2A4F60BA1A0C410900A6E577 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4F60B91A0C410900A6E577 /* Images.xcassets */; };
@@ -17,6 +20,10 @@
 		2A4F60E61A0C49D300A6E577 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F60E41A0C49D300A6E577 /* HomeViewController.m */; };
 		2A4F60E71A0C49D300A6E577 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4F60E51A0C49D300A6E577 /* HomeViewController.xib */; };
 		2A4F60EA1A0C4B4A00A6E577 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F60E91A0C4B4A00A6E577 /* Person.m */; };
+		2AC971E41A0D76D4001070B8 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC971E21A0D76D4001070B8 /* FeedViewController.m */; };
+		2AC971E51A0D76D4001070B8 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC971E31A0D76D4001070B8 /* FeedViewController.xib */; };
+		2AC971E91A0D816E001070B8 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC971E71A0D816E001070B8 /* FeedCell.m */; };
+		2AC971EA1A0D816E001070B8 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC971E81A0D816E001070B8 /* FeedCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A2956531A12CDAD00BEEE64 /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		2A2956541A12CDAD00BEEE64 /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		2A2956561A12DB3A00BEEE64 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		2A2956571A12DB3A00BEEE64 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		2A2956581A12DB3A00BEEE64 /* ModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
 		2A4F60A91A0C410900A6E577 /* iOSCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4F60AD1A0C410900A6E577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A4F60AE1A0C410900A6E577 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,6 +60,12 @@
 		2A4F60E51A0C49D300A6E577 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		2A4F60E81A0C4B4A00A6E577 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		2A4F60E91A0C4B4A00A6E577 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		2AC971E11A0D76D4001070B8 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		2AC971E21A0D76D4001070B8 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		2AC971E31A0D76D4001070B8 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		2AC971E61A0D816E001070B8 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		2AC971E71A0D816E001070B8 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
+		2AC971E81A0D816E001070B8 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +152,7 @@
 			children = (
 				2A4F60E01A0C49AA00A6E577 /* First */,
 				2A4F60E11A0C49B200A6E577 /* Home */,
+				2AC971E01A0D76B3001070B8 /* Feed */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +162,8 @@
 			children = (
 				2A4F60E81A0C4B4A00A6E577 /* Person.h */,
 				2A4F60E91A0C4B4A00A6E577 /* Person.m */,
+				2A2956531A12CDAD00BEEE64 /* Feed.h */,
+				2A2956541A12CDAD00BEEE64 /* Feed.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -186,6 +207,22 @@
 				2A4F60E51A0C49D300A6E577 /* HomeViewController.xib */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		2AC971E01A0D76B3001070B8 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				2AC971E11A0D76D4001070B8 /* FeedViewController.h */,
+				2AC971E21A0D76D4001070B8 /* FeedViewController.m */,
+				2AC971E31A0D76D4001070B8 /* FeedViewController.xib */,
+				2AC971E61A0D816E001070B8 /* FeedCell.h */,
+				2AC971E71A0D816E001070B8 /* FeedCell.m */,
+				2AC971E81A0D816E001070B8 /* FeedCell.xib */,
+				2A2956561A12DB3A00BEEE64 /* ModalViewController.h */,
+				2A2956571A12DB3A00BEEE64 /* ModalViewController.m */,
+				2A2956581A12DB3A00BEEE64 /* ModalViewController.xib */,
+			);
+			name = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +306,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A4F60BD1A0C410900A6E577 /* LaunchScreen.xib in Resources */,
+				2A29565A1A12DB3A00BEEE64 /* ModalViewController.xib in Resources */,
+				2AC971E51A0D76D4001070B8 /* FeedViewController.xib in Resources */,
 				2A4F60DB1A0C41D600A6E577 /* FirstViewController.xib in Resources */,
+				2AC971EA1A0D816E001070B8 /* FeedCell.xib in Resources */,
 				2A4F60BA1A0C410900A6E577 /* Images.xcassets in Resources */,
 				2A4F60E71A0C49D300A6E577 /* HomeViewController.xib in Resources */,
 			);
@@ -291,8 +331,12 @@
 			files = (
 				2A4F60B21A0C410900A6E577 /* AppDelegate.m in Sources */,
 				2A4F60DA1A0C41D600A6E577 /* FirstViewController.m in Sources */,
+				2AC971E91A0D816E001070B8 /* FeedCell.m in Sources */,
 				2A4F60EA1A0C4B4A00A6E577 /* Person.m in Sources */,
 				2A4F60AF1A0C410900A6E577 /* main.m in Sources */,
+				2A2956591A12DB3A00BEEE64 /* ModalViewController.m in Sources */,
+				2A2956551A12CDAD00BEEE64 /* Feed.m in Sources */,
+				2AC971E41A0D76D4001070B8 /* FeedViewController.m in Sources */,
 				2A4F60E61A0C49D300A6E577 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +520,7 @@
 				2A4F60CE1A0C410A00A6E577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A4F60CF1A0C410A00A6E577 /* Build configuration list for PBXNativeTarget "iOSCourseTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +529,7 @@
 				2A4F60D11A0C410A00A6E577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong) NSArray *feeds;
 
 - (instancetype)initWithFirstName:(NSString *)firstName withLastName:(NSString *)lastName;
 

@@ -16,23 +16,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GE-lM-JdB">
-                    <rect key="frame" x="14" y="92" width="292" height="21"/>
+                    <rect key="frame" x="11" y="92" width="298" height="24"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="19O-YT-IqX"/>
+                        <constraint firstAttribute="height" constant="24" id="19O-YT-IqX"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t1-hc-Sfa">
+                    <rect key="frame" x="124" y="186" width="73" height="30"/>
+                    <state key="normal" title="Table View">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="feed:" destination="-1" eventType="touchUpInside" id="Db5-Hp-hYU"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="9GE-lM-JdB" secondAttribute="trailing" constant="14" id="3dX-aH-s5O"/>
+                <constraint firstAttribute="trailing" secondItem="9GE-lM-JdB" secondAttribute="trailing" constant="11" id="3dX-aH-s5O"/>
                 <constraint firstItem="9GE-lM-JdB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="92" id="eVc-af-uoq"/>
-                <constraint firstItem="9GE-lM-JdB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="14" id="gcx-5b-RD6"/>
+                <constraint firstItem="9GE-lM-JdB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="11" id="gcx-5b-RD6"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-            <point key="canvasLocation" x="110" y="364"/>
+            <point key="canvasLocation" x="-108" y="177"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

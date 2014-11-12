@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "FeedViewController.h"
 
 @interface HomeViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
@@ -23,6 +24,13 @@
     if (self.person != nil) {
         self.welcomeLabel.text = [NSString stringWithFormat:@"Welcome %@!", self.person.firstName];
     }
+}
+
+- (IBAction)feed:(id)sender {
+    FeedViewController *feedViewController = [[FeedViewController alloc] initWithNibName:@"FeedViewController" bundle:nil];
+    feedViewController.person = self.person;
+    
+    [self.navigationController pushViewController:feedViewController animated:YES];
 }
 
 @end
