@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "FeedViewController.h"
+#import "UtilsViewController.h"
 
 @interface HomeViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
@@ -31,6 +32,11 @@
     feedViewController.person = self.person;
     
     [self.navigationController pushViewController:feedViewController animated:YES];
+}
+
+- (IBAction)utils:(id)sender {
+    UtilsViewController *utilsViewController = [[UtilsViewController alloc] init];
+    [self.navigationController pushViewController:utilsViewController animated:YES];
 }
 
 @end

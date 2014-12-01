@@ -24,7 +24,7 @@
                     </constraints>
                     <items>
                         <navigationItem title="Feed" id="ulp-8e-bwK">
-                            <barButtonItem key="leftBarButtonItem" title="Dismiss" style="plain" id="nAi-b5-HWZ">
+                            <barButtonItem key="leftBarButtonItem" title="Dismiss" id="nAi-b5-HWZ">
                                 <connections>
                                     <action selector="dismissModal:" destination="-1" id="SY4-gs-hpb"/>
                                 </connections>
@@ -73,7 +73,7 @@
                 <constraint firstItem="ZE8-GA-rkE" firstAttribute="top" secondItem="fHL-pm-Lqx" secondAttribute="bottom" constant="38" id="qFF-aR-sG2"/>
                 <constraint firstItem="ZE8-GA-rkE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ulh-zm-sGn"/>
             </constraints>
-            <point key="canvasLocation" x="261" y="333"/>
+            <point key="canvasLocation" x="238" y="323"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -24,6 +24,12 @@
 		2AC971E51A0D76D4001070B8 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC971E31A0D76D4001070B8 /* FeedViewController.xib */; };
 		2AC971E91A0D816E001070B8 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC971E71A0D816E001070B8 /* FeedCell.m */; };
 		2AC971EA1A0D816E001070B8 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC971E81A0D816E001070B8 /* FeedCell.xib */; };
+		D8FBE4611A2CA25B006AED56 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FBE45E1A2CA25B006AED56 /* ProfileView.m */; };
+		D8FBE4621A2CA25B006AED56 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8FBE45F1A2CA25B006AED56 /* ProfileView.xib */; };
+		D8FBE4651A2CA289006AED56 /* UtilsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FBE4641A2CA289006AED56 /* UtilsView.m */; };
+		D8FBE46B1A2CA331006AED56 /* UIView+CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FBE46A1A2CA331006AED56 /* UIView+CustomView.m */; };
+		D8FBE4711A2CAB9F006AED56 /* UtilsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FBE46F1A2CAB9F006AED56 /* UtilsViewController.m */; };
+		D8FBE4721A2CAB9F006AED56 /* UtilsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8FBE4701A2CAB9F006AED56 /* UtilsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,16 @@
 		2AC971E61A0D816E001070B8 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
 		2AC971E71A0D816E001070B8 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
 		2AC971E81A0D816E001070B8 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		D8FBE45D1A2CA25B006AED56 /* ProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileView.h; sourceTree = "<group>"; };
+		D8FBE45E1A2CA25B006AED56 /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
+		D8FBE45F1A2CA25B006AED56 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		D8FBE4631A2CA289006AED56 /* UtilsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsView.h; sourceTree = "<group>"; };
+		D8FBE4641A2CA289006AED56 /* UtilsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilsView.m; sourceTree = "<group>"; };
+		D8FBE4691A2CA331006AED56 /* UIView+CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CustomView.h"; sourceTree = "<group>"; };
+		D8FBE46A1A2CA331006AED56 /* UIView+CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CustomView.m"; sourceTree = "<group>"; };
+		D8FBE46E1A2CAB9F006AED56 /* UtilsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsViewController.h; sourceTree = "<group>"; };
+		D8FBE46F1A2CAB9F006AED56 /* UtilsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilsViewController.m; sourceTree = "<group>"; };
+		D8FBE4701A2CAB9F006AED56 /* UtilsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UtilsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +169,7 @@
 				2A4F60E01A0C49AA00A6E577 /* First */,
 				2A4F60E11A0C49B200A6E577 /* Home */,
 				2AC971E01A0D76B3001070B8 /* Feed */,
+				D8FBE46D1A2CAB8B006AED56 /* Utils */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +188,8 @@
 		2A4F60DD1A0C44DD00A6E577 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D8FBE4661A2CA290006AED56 /* UtilsView */,
+				D8FBE4681A2CA2C0006AED56 /* Components */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -178,6 +197,7 @@
 		2A4F60DE1A0C44E800A6E577 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D8FBE46C1A2CA337006AED56 /* CustomView */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -223,6 +243,52 @@
 				2A2956581A12DB3A00BEEE64 /* ModalViewController.xib */,
 			);
 			name = Feed;
+			sourceTree = "<group>";
+		};
+		D8FBE4661A2CA290006AED56 /* UtilsView */ = {
+			isa = PBXGroup;
+			children = (
+				D8FBE4631A2CA289006AED56 /* UtilsView.h */,
+				D8FBE4641A2CA289006AED56 /* UtilsView.m */,
+			);
+			name = UtilsView;
+			sourceTree = "<group>";
+		};
+		D8FBE4671A2CA2AB006AED56 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D8FBE45D1A2CA25B006AED56 /* ProfileView.h */,
+				D8FBE45E1A2CA25B006AED56 /* ProfileView.m */,
+				D8FBE45F1A2CA25B006AED56 /* ProfileView.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		D8FBE4681A2CA2C0006AED56 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D8FBE4671A2CA2AB006AED56 /* Profile */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		D8FBE46C1A2CA337006AED56 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				D8FBE4691A2CA331006AED56 /* UIView+CustomView.h */,
+				D8FBE46A1A2CA331006AED56 /* UIView+CustomView.m */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		D8FBE46D1A2CAB8B006AED56 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D8FBE46E1A2CAB9F006AED56 /* UtilsViewController.h */,
+				D8FBE46F1A2CAB9F006AED56 /* UtilsViewController.m */,
+				D8FBE4701A2CAB9F006AED56 /* UtilsViewController.xib */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,10 +371,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FBE4721A2CAB9F006AED56 /* UtilsViewController.xib in Resources */,
 				2A4F60BD1A0C410900A6E577 /* LaunchScreen.xib in Resources */,
 				2A29565A1A12DB3A00BEEE64 /* ModalViewController.xib in Resources */,
 				2AC971E51A0D76D4001070B8 /* FeedViewController.xib in Resources */,
 				2A4F60DB1A0C41D600A6E577 /* FirstViewController.xib in Resources */,
+				D8FBE4621A2CA25B006AED56 /* ProfileView.xib in Resources */,
 				2AC971EA1A0D816E001070B8 /* FeedCell.xib in Resources */,
 				2A4F60BA1A0C410900A6E577 /* Images.xcassets in Resources */,
 				2A4F60E71A0C49D300A6E577 /* HomeViewController.xib in Resources */,
@@ -329,12 +397,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FBE4611A2CA25B006AED56 /* ProfileView.m in Sources */,
 				2A4F60B21A0C410900A6E577 /* AppDelegate.m in Sources */,
 				2A4F60DA1A0C41D600A6E577 /* FirstViewController.m in Sources */,
+				D8FBE4651A2CA289006AED56 /* UtilsView.m in Sources */,
 				2AC971E91A0D816E001070B8 /* FeedCell.m in Sources */,
+				D8FBE4711A2CAB9F006AED56 /* UtilsViewController.m in Sources */,
 				2A4F60EA1A0C4B4A00A6E577 /* Person.m in Sources */,
 				2A4F60AF1A0C410900A6E577 /* main.m in Sources */,
 				2A2956591A12DB3A00BEEE64 /* ModalViewController.m in Sources */,
+				D8FBE46B1A2CA331006AED56 /* UIView+CustomView.m in Sources */,
 				2A2956551A12CDAD00BEEE64 /* Feed.m in Sources */,
 				2AC971E41A0D76D4001070B8 /* FeedViewController.m in Sources */,
 				2A4F60E61A0C49D300A6E577 /* HomeViewController.m in Sources */,

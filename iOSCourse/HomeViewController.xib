@@ -33,6 +33,15 @@
                         <action selector="feed:" destination="-1" eventType="touchUpInside" id="Db5-Hp-hYU"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejI-Pl-iP8">
+                    <rect key="frame" x="124" y="238" width="73" height="30"/>
+                    <state key="normal" title="Utils View">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="utils:" destination="-1" eventType="touchUpInside" id="Ex4-4X-qdC"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
