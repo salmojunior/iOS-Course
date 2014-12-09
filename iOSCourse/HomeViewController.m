@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 #import "FeedViewController.h"
 #import "UtilsViewController.h"
+#import "Session.h"
+#import "ProgressViewController.h"
 
 @interface HomeViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
@@ -24,6 +26,11 @@
     
     if (self.person != nil) {
         self.welcomeLabel.text = [NSString stringWithFormat:@"Welcome %@!", self.person.firstName];
+    } else {
+        Session *session = [Session sharedSession];
+        self.person = session.person;
+        
+        self.welcomeLabel.text = [NSString stringWithFormat:@"Welcome %@!", self.person.firstName];
     }
 }
 
@@ -37,6 +44,11 @@
 - (IBAction)utils:(id)sender {
     UtilsViewController *utilsViewController = [[UtilsViewController alloc] init];
     [self.navigationController pushViewController:utilsViewController animated:YES];
+}
+
+- (IBAction)progress:(id)sender {
+    ProgressViewController *progressViewController = [[ProgressViewController alloc] init];
+    [self.navigationController pushViewController:progressViewController animated:YES];
 }
 
 @end

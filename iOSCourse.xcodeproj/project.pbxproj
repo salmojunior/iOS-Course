@@ -24,6 +24,10 @@
 		2AC971E51A0D76D4001070B8 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC971E31A0D76D4001070B8 /* FeedViewController.xib */; };
 		2AC971E91A0D816E001070B8 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC971E71A0D816E001070B8 /* FeedCell.m */; };
 		2AC971EA1A0D816E001070B8 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC971E81A0D816E001070B8 /* FeedCell.xib */; };
+		D8924EB21A3322CF0085B5AF /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = D8924EB11A3322CF0085B5AF /* Session.m */; };
+		D8924EB71A3333FF0085B5AF /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8924EB51A3333FF0085B5AF /* ProgressViewController.m */; };
+		D8924EB81A3333FF0085B5AF /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8924EB61A3333FF0085B5AF /* ProgressViewController.xib */; };
+		D8924EBC1A33360C0085B5AF /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8924EBB1A33360C0085B5AF /* ProgressView.m */; };
 		D8FBE4611A2CA25B006AED56 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FBE45E1A2CA25B006AED56 /* ProfileView.m */; };
 		D8FBE4621A2CA25B006AED56 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8FBE45F1A2CA25B006AED56 /* ProfileView.xib */; };
 		D8FBE4651A2CA289006AED56 /* UtilsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FBE4641A2CA289006AED56 /* UtilsView.m */; };
@@ -72,6 +76,13 @@
 		2AC971E61A0D816E001070B8 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
 		2AC971E71A0D816E001070B8 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
 		2AC971E81A0D816E001070B8 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		D8924EB01A3322CF0085B5AF /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		D8924EB11A3322CF0085B5AF /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		D8924EB41A3333FF0085B5AF /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		D8924EB51A3333FF0085B5AF /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
+		D8924EB61A3333FF0085B5AF /* ProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
+		D8924EBA1A33360C0085B5AF /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		D8924EBB1A33360C0085B5AF /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		D8FBE45D1A2CA25B006AED56 /* ProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileView.h; sourceTree = "<group>"; };
 		D8FBE45E1A2CA25B006AED56 /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
 		D8FBE45F1A2CA25B006AED56 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
@@ -166,6 +177,7 @@
 		2A4F60D21A0C415300A6E577 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D8924EB31A33335E0085B5AF /* Progress */,
 				2A4F60E01A0C49AA00A6E577 /* First */,
 				2A4F60E11A0C49B200A6E577 /* Home */,
 				2AC971E01A0D76B3001070B8 /* Feed */,
@@ -188,6 +200,7 @@
 		2A4F60DD1A0C44DD00A6E577 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D8924EB91A3335F90085B5AF /* Progress */,
 				D8FBE4661A2CA290006AED56 /* UtilsView */,
 				D8FBE4681A2CA2C0006AED56 /* Components */,
 			);
@@ -198,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				D8FBE46C1A2CA337006AED56 /* CustomView */,
+				D8924EB01A3322CF0085B5AF /* Session.h */,
+				D8924EB11A3322CF0085B5AF /* Session.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -243,6 +258,25 @@
 				2A2956581A12DB3A00BEEE64 /* ModalViewController.xib */,
 			);
 			name = Feed;
+			sourceTree = "<group>";
+		};
+		D8924EB31A33335E0085B5AF /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				D8924EB41A3333FF0085B5AF /* ProgressViewController.h */,
+				D8924EB51A3333FF0085B5AF /* ProgressViewController.m */,
+				D8924EB61A3333FF0085B5AF /* ProgressViewController.xib */,
+			);
+			name = Progress;
+			sourceTree = "<group>";
+		};
+		D8924EB91A3335F90085B5AF /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				D8924EBA1A33360C0085B5AF /* ProgressView.h */,
+				D8924EBB1A33360C0085B5AF /* ProgressView.m */,
+			);
+			name = Progress;
 			sourceTree = "<group>";
 		};
 		D8FBE4661A2CA290006AED56 /* UtilsView */ = {
@@ -374,6 +408,7 @@
 				D8FBE4721A2CAB9F006AED56 /* UtilsViewController.xib in Resources */,
 				2A4F60BD1A0C410900A6E577 /* LaunchScreen.xib in Resources */,
 				2A29565A1A12DB3A00BEEE64 /* ModalViewController.xib in Resources */,
+				D8924EB81A3333FF0085B5AF /* ProgressViewController.xib in Resources */,
 				2AC971E51A0D76D4001070B8 /* FeedViewController.xib in Resources */,
 				2A4F60DB1A0C41D600A6E577 /* FirstViewController.xib in Resources */,
 				D8FBE4621A2CA25B006AED56 /* ProfileView.xib in Resources */,
@@ -403,9 +438,12 @@
 				D8FBE4651A2CA289006AED56 /* UtilsView.m in Sources */,
 				2AC971E91A0D816E001070B8 /* FeedCell.m in Sources */,
 				D8FBE4711A2CAB9F006AED56 /* UtilsViewController.m in Sources */,
+				D8924EB21A3322CF0085B5AF /* Session.m in Sources */,
 				2A4F60EA1A0C4B4A00A6E577 /* Person.m in Sources */,
 				2A4F60AF1A0C410900A6E577 /* main.m in Sources */,
+				D8924EBC1A33360C0085B5AF /* ProgressView.m in Sources */,
 				2A2956591A12DB3A00BEEE64 /* ModalViewController.m in Sources */,
+				D8924EB71A3333FF0085B5AF /* ProgressViewController.m in Sources */,
 				D8FBE46B1A2CA331006AED56 /* UIView+CustomView.m in Sources */,
 				2A2956551A12CDAD00BEEE64 /* Feed.m in Sources */,
 				2AC971E41A0D76D4001070B8 /* FeedViewController.m in Sources */,

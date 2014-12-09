@@ -40,7 +40,7 @@
 
 -(void)valueLabel:(NSString *)texto
 {
-    self.resultLabel.text =texto;
+    self.resultLabel.text = texto;
 }
 
 @end

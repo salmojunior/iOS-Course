@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressViewController">
+            <connections>
+                <outlet property="mainView" destination="i5M-Pr-FkT" id="0aw-Eo-HvF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="ProgressView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-lC-1v6">
+                    <rect key="frame" x="34" y="112" width="253" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="253" id="mPv-7c-f74"/>
+                    </constraints>
+                </progressView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VKX-2H-CQi">
+                    <rect key="frame" x="34" y="159" width="253" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="253" id="BaG-Ex-DPc"/>
+                    </constraints>
+                </progressView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rJG-hb-E8b">
+                    <rect key="frame" x="34" y="209" width="253" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="253" id="o5l-QF-c4g"/>
+                    </constraints>
+                </progressView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uMT-YO-zai">
+                    <rect key="frame" x="34" y="255" width="253" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="253" id="V3u-DH-NBS"/>
+                    </constraints>
+                </progressView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dff-b0-sME">
+                    <rect key="frame" x="129" y="409" width="62" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="Eua-Q3-U4q"/>
+                        <constraint firstAttribute="height" constant="30" id="uIE-SL-obo"/>
+                    </constraints>
+                    <state key="normal" title="Start">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startAllProgress:" destination="-1" eventType="touchUpInside" id="Hut-lC-Q1e"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rJG-hb-E8b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="2Xt-zV-4ly"/>
+                <constraint firstItem="uMT-YO-zai" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="8ha-nV-jpt"/>
+                <constraint firstAttribute="trailing" secondItem="Dff-b0-sME" secondAttribute="trailing" constant="129" id="CNY-lG-gvS"/>
+                <constraint firstItem="Dff-b0-sME" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="129" id="J5e-t9-ywZ"/>
+                <constraint firstAttribute="trailing" secondItem="uMT-YO-zai" secondAttribute="trailing" constant="33" id="Pl2-lj-NFp"/>
+                <constraint firstItem="VKX-2H-CQi" firstAttribute="top" secondItem="KhV-lC-1v6" secondAttribute="bottom" constant="45" id="TMO-fL-xTu"/>
+                <constraint firstItem="KhV-lC-1v6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="112" id="WzG-Y2-l4Q"/>
+                <constraint firstAttribute="trailing" secondItem="VKX-2H-CQi" secondAttribute="trailing" constant="33" id="ZCL-Gd-RT3"/>
+                <constraint firstAttribute="trailing" secondItem="KhV-lC-1v6" secondAttribute="trailing" constant="33" id="ZPK-oa-MdP"/>
+                <constraint firstItem="VKX-2H-CQi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="b6o-pX-Qeg"/>
+                <constraint firstItem="rJG-hb-E8b" firstAttribute="top" secondItem="VKX-2H-CQi" secondAttribute="bottom" constant="48" id="eyq-Gm-anf"/>
+                <constraint firstItem="KhV-lC-1v6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="rTE-Jn-NrZ"/>
+                <constraint firstItem="uMT-YO-zai" firstAttribute="top" secondItem="rJG-hb-E8b" secondAttribute="bottom" constant="44" id="sbB-dh-eSc"/>
+                <constraint firstItem="Dff-b0-sME" firstAttribute="top" secondItem="uMT-YO-zai" secondAttribute="bottom" constant="152" id="srL-FG-uH1"/>
+                <constraint firstAttribute="trailing" secondItem="rJG-hb-E8b" secondAttribute="trailing" constant="33" id="v7w-wI-aX6"/>
+            </constraints>
+            <connections>
+                <outlet property="progress1" destination="KhV-lC-1v6" id="Opi-YH-jJi"/>
+                <outlet property="progress2" destination="VKX-2H-CQi" id="gkd-LK-Vuo"/>
+                <outlet property="progress3" destination="rJG-hb-E8b" id="0ji-Ra-XM0"/>
+                <outlet property="progress4" destination="uMT-YO-zai" id="4yv-aR-eY8"/>
+                <outletCollection property="progressViews" destination="KhV-lC-1v6" id="TMt-Dw-2R3"/>
+                <outletCollection property="progressViews" destination="VKX-2H-CQi" id="crx-c3-chE"/>
+                <outletCollection property="progressViews" destination="rJG-hb-E8b" id="5t5-zF-IIb"/>
+                <outletCollection property="progressViews" destination="uMT-YO-zai" id="7ls-EA-N15"/>
+            </connections>
+            <point key="canvasLocation" x="171" y="349"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

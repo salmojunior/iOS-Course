@@ -24,7 +24,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="187" y="-40"/>
+            <point key="canvasLocation" x="297" y="160"/>
         </view>
     </objects>
     <resources>

@@ -36,6 +36,11 @@
     [self.mainView addImageProfile:self];
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (UtilsView *)mainView
 {
     UtilsView *mainView = (UtilsView *)self.view;

@@ -42,6 +42,15 @@
                         <action selector="utils:" destination="-1" eventType="touchUpInside" id="Ex4-4X-qdC"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VH0-tZ-ZL1">
+                    <rect key="frame" x="124" y="293" width="73" height="30"/>
+                    <state key="normal" title="Progress">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="progress:" destination="-1" eventType="touchUpInside" id="y3x-1b-XLS"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "HomeViewController.h"
 #import "Person.h"
+#import "Session.h"
 
 @interface FirstViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
@@ -34,7 +35,11 @@
         NSString *lastName = self.lastNameTextField.text;
         
         Person *person = [[Person alloc] initWithFirstName:firstName withLastName:lastName];
-        [homeViewController setPerson:person];
+        
+        Session *session = [Session sharedSession];
+        session.person = person;
+        
+//        [homeViewController setPerson:person];
         
         [self.navigationController pushViewController:homeViewController animated:YES];
     } else {
