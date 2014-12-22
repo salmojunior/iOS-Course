@@ -9,12 +9,14 @@
 #import "FeedViewController.h"
 #import "FeedCell.h"
 #import "ModalViewController.h"
+#import "PersonService.h"
 
 #define cellIdentifier @"cell"
 
 @interface FeedViewController ()<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *feedTableView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @end
 
 @implementation FeedViewController
@@ -39,13 +41,25 @@
     testBlock();
     
     NSLog(@"Fora do block: %d", test);
+    
+    [self.activityIndicator setHidden:NO];
+    [self.activityIndicator startAnimating];
+    [PersonService feedFromPerson:self.person withCompletionBlock:^(Person *person, NSError *error) {
+        self.person = person;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.activityIndicator stopAnimating];
+            [self.activityIndicator setHidden:YES];
+            [self.feedTableView reloadData];
+        });
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self doSomethingWithBlock:^(NSInteger value) {
-        NSLog(@"Result block: %ld", value);
-    }];
+//    [self doSomethingWithBlock:^(NSInteger value) {
+//        NSLog(@"Result block: %ld", value);
+//    }];
 }
 
 #pragma mark - UITableView Delegate

@@ -16,4 +16,6 @@
 
 - (instancetype)initWithFirstName:(NSString *)firstName withLastName:(NSString *)lastName;
 
+- (void)parseFeedFromArray:(NSDictionary *)jsonDic;
+
 @end

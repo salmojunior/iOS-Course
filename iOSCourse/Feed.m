@@ -10,4 +10,10 @@
 
 @implementation Feed
 
+- (NSString *)description{
+    NSString *descriptionFeed = [NSString stringWithFormat:@"Title: %@ - Description: %@", self.title, self.feedDescription];
+    
+    return descriptionFeed;
+}
+
 @end

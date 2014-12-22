@@ -24,6 +24,7 @@
 		2AC971E51A0D76D4001070B8 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC971E31A0D76D4001070B8 /* FeedViewController.xib */; };
 		2AC971E91A0D816E001070B8 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC971E71A0D816E001070B8 /* FeedCell.m */; };
 		2AC971EA1A0D816E001070B8 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC971E81A0D816E001070B8 /* FeedCell.xib */; };
+		D8923AC51A3C6428008BFD09 /* PersonService.m in Sources */ = {isa = PBXBuildFile; fileRef = D8923AC41A3C6428008BFD09 /* PersonService.m */; };
 		D8924EB21A3322CF0085B5AF /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = D8924EB11A3322CF0085B5AF /* Session.m */; };
 		D8924EB71A3333FF0085B5AF /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8924EB51A3333FF0085B5AF /* ProgressViewController.m */; };
 		D8924EB81A3333FF0085B5AF /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8924EB61A3333FF0085B5AF /* ProgressViewController.xib */; };
@@ -76,6 +77,8 @@
 		2AC971E61A0D816E001070B8 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
 		2AC971E71A0D816E001070B8 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
 		2AC971E81A0D816E001070B8 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		D8923AC31A3C6428008BFD09 /* PersonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonService.h; sourceTree = "<group>"; };
+		D8923AC41A3C6428008BFD09 /* PersonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonService.m; sourceTree = "<group>"; };
 		D8924EB01A3322CF0085B5AF /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
 		D8924EB11A3322CF0085B5AF /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 		D8924EB41A3333FF0085B5AF /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 		2A4F60DF1A0C44F400A6E577 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D8923AC31A3C6428008BFD09 /* PersonService.h */,
+				D8923AC41A3C6428008BFD09 /* PersonService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				2A2956551A12CDAD00BEEE64 /* Feed.m in Sources */,
 				2AC971E41A0D76D4001070B8 /* FeedViewController.m in Sources */,
 				2A4F60E61A0C49D300A6E577 /* HomeViewController.m in Sources */,
+				D8923AC51A3C6428008BFD09 /* PersonService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

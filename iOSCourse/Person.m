@@ -17,26 +17,53 @@
     if (self) {
         self.firstName = firstName;
         self.lastName = lastName;
-        self.feeds = [self mockFeed];
+//        self.feeds = [self mockFeed];
     }
     
     return self;
 }
 
-- (NSArray *)mockFeed{
-    NSMutableArray *feeds = [[NSMutableArray alloc] init];
+//- (NSArray *)mockFeed{
+//    NSMutableArray *feeds = [[NSMutableArray alloc] init];
+//    
+//    for (int i = 0; i < 6; i++) {
+//        Feed *feed = [[Feed alloc] init];
+//        
+//        feed.title = [NSString stringWithFormat:@"Title %d", i];
+//        feed.feedDescription = [NSString stringWithFormat:@"Description %d", i];
+//        feed.feedImage = [UIImage imageNamed:@"feed"];
+//        
+//        [feeds addObject:feed];
+//    }
+//    
+//    return feeds;
+//}
+
+- (void)parseFeedFromArray:(NSDictionary *)jsonDic
+{
+    NSMutableArray *tempFeeds = [NSMutableArray new];
     
-    for (int i = 0; i < 6; i++) {
+    for (NSDictionary *dic in jsonDic) {
         Feed *feed = [[Feed alloc] init];
         
-        feed.title = [NSString stringWithFormat:@"Title %d", i];
-        feed.feedDescription = [NSString stringWithFormat:@"Description %d", i];
-        feed.feedImage = [UIImage imageNamed:@"feed"];
+        feed.title = dic[@"feedTitle"];
+        feed.feedDescription = dic[@"feedDescription"];
         
-        [feeds addObject:feed];
+        NSURL *imageURL = [NSURL URLWithString:dic[@"feedImage"]];
+        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+        
+        UIImage *feedImage = [UIImage imageWithData:imageData];
+        
+        if (feedImage == nil) {
+            feedImage = [UIImage imageNamed:@"defaultFeed"];
+        }
+        
+        feed.feedImage = feedImage;
+        
+        [tempFeeds addObject:feed];
     }
     
-    return feeds;
+    self.feeds = tempFeeds;
 }
 
 @end
