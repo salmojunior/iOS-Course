@@ -2,20 +2,27 @@
 //  Person.h
 //  iOSCourse
 //
-//  Created by Preto on 06/11/14.
-//  Copyright (c) 2014 CIT. All rights reserved.
+//  Created by Salmo Roberto da Silva Junior on 1/13/15.
+//  Copyright (c) 2015 CIT. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Person : NSObject
+@class Feed;
 
-@property (nonatomic, strong) NSString *firstName;
-@property (nonatomic, strong) NSString *lastName;
-@property (nonatomic, strong) NSArray *feeds;
+@interface Person : NSManagedObject
 
-- (instancetype)initWithFirstName:(NSString *)firstName withLastName:(NSString *)lastName;
+@property (nonatomic, retain) NSString * firstName;
+@property (nonatomic, retain) NSString * lastName;
+@property (nonatomic, retain) NSSet *feeds;
+@end
 
-- (void)parseFeedFromArray:(NSDictionary *)jsonDic;
+@interface Person (CoreDataGeneratedAccessors)
+
+- (void)addFeedsObject:(Feed *)value;
+- (void)removeFeedsObject:(Feed *)value;
+- (void)addFeeds:(NSSet *)values;
+- (void)removeFeeds:(NSSet *)values;
 
 @end

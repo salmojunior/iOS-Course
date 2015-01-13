@@ -7,10 +7,11 @@
 //
 
 #import "PersonService.h"
+#import "Person+Accessor.h"
 
 @implementation PersonService
 
-+ (void)feedFromPerson:(Person *)person withCompletionBlock:(void (^)(Person *, NSError *))completion
++ (void)feedFromPerson:(Person *)person withCompletionBlock:(void (^)(BOOL success, NSError *))completion
 {
     NSURL *url = [[NSURL alloc] initWithString:@"http://private-18ed9-cursoposts.apiary-mock.com/notes"];
     
@@ -21,6 +22,7 @@
     NSURLSession *session = [NSURLSession sharedSession];
     
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        BOOL status = NO;
         
         if (!error) {
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
@@ -32,11 +34,12 @@
                 
                 if (!jsonError) {
                     [person parseFeedFromArray:jsonDic];
+                    status = YES;
                 }
             }
         }
         
-        completion(person, error);
+        completion(status, error);
     }];
     
     [dataTask resume];

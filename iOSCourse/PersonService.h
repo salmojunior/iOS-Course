@@ -11,6 +11,6 @@
 
 @interface PersonService : NSObject
 
-+ (void)feedFromPerson:(Person *)person withCompletionBlock:(void (^)(Person *person, NSError *error))completion;
++ (void)feedFromPerson:(Person *)person withCompletionBlock:(void (^)(BOOL success, NSError *error))completion;
 
 @end

@@ -9,7 +9,9 @@
 #import "FirstViewController.h"
 #import "HomeViewController.h"
 #import "Person.h"
+#import "Person+Accessor.h"
 #import "Session.h"
+#import "AppDelegate.h"
 
 @interface FirstViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
@@ -34,7 +36,8 @@
         NSString *firstName = self.firstNameTextField.text;
         NSString *lastName = self.lastNameTextField.text;
         
-        Person *person = [[Person alloc] initWithFirstName:firstName withLastName:lastName];
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        Person *person = [Person insertNewObjectInManagedObjectContext:appDelegate.managedObjectContext withName:firstName andLastName:lastName];
         
         Session *session = [Session sharedSession];
         session.person = person;

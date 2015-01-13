@@ -2,17 +2,19 @@
 //  Feed.h
 //  iOSCourse
 //
-//  Created by Preto on 11/11/14.
-//  Copyright (c) 2014 CIT. All rights reserved.
+//  Created by Salmo Roberto da Silva Junior on 1/13/15.
+//  Copyright (c) 2015 CIT. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface Feed : NSObject
 
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *feedDescription;
-@property (nonatomic, strong) UIImage *feedImage;
+@interface Feed : NSManagedObject
+
+@property (nonatomic, retain) NSString * feedDescription;
+@property (nonatomic, retain) NSString * feedImage;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSManagedObject *whoPost;
 
 @end

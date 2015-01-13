@@ -31,7 +31,8 @@
 {
     self.titleLabel.text = feed.title;
     self.descriptionLabel.text = feed.feedDescription;
-    self.feedImageView.image = feed.feedImage;
+    NSData  *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:feed.feedImage]];
+    self.feedImageView.image = [UIImage imageWithData:imageData];
 }
 
 @end

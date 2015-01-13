@@ -32,7 +32,7 @@
 
 - (void)populateFeed
 {
-    self.feedImageView.image = self.feed.feedImage;
+//    self.feedImageView.image = self.feed.feedImage;
     self.feedTitleLabel.text = self.feed.title;
     self.feedDescriptionLabel.text = self.feed.feedDescription;
 }

@@ -10,6 +10,9 @@
 #import "FeedCell.h"
 #import "ModalViewController.h"
 #import "PersonService.h"
+#import "Feed+Accessor.h"
+#import "Feed.h"
+#import "AppDelegate.h"
 
 #define cellIdentifier @"cell"
 
@@ -17,6 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *feedTableView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, strong) NSArray *feeds;
 @end
 
 @implementation FeedViewController
@@ -44,14 +48,17 @@
     
     [self.activityIndicator setHidden:NO];
     [self.activityIndicator startAnimating];
-    [PersonService feedFromPerson:self.person withCompletionBlock:^(Person *person, NSError *error) {
-        self.person = person;
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.activityIndicator stopAnimating];
-            [self.activityIndicator setHidden:YES];
-            [self.feedTableView reloadData];
-        });
+    [PersonService feedFromPerson:self.person withCompletionBlock:^(BOOL success, NSError *error) {
+        if (success) {
+            AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+            self.feeds = [Feed retrieveFeedsInManagedObjectContext:appDelegate.managedObjectContext fromPerson:self.person];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.activityIndicator stopAnimating];
+                [self.activityIndicator setHidden:YES];
+                [self.feedTableView reloadData];
+            });
+        }
     }];
 }
 
@@ -66,14 +73,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.person.feeds.count;
+    return self.feeds.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FeedCell *cell =(FeedCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
 
-    Feed *feed = self.person.feeds[indexPath.row];
+    Feed *feed = self.feeds[indexPath.row];
     [cell populateCellFromFeed:feed];
     
     return cell;
@@ -81,7 +88,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Feed *feed = self.person.feeds[indexPath.row];
+    Feed *feed = self.feeds[indexPath.row];
     
     ModalViewController *modalViewController = [[ModalViewController alloc] init];
     modalViewController.feed = feed;
