@@ -28,16 +28,53 @@
                                              selector:@selector(testReceiveNotification:)
                                                  name:UIApplicationDidBecomeActiveNotification
                                                object:nil];
+    
+    UIPanGestureRecognizer *tapGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+    
+    [self.mainView addGestureRecognizer:tapGesture];
 }
+
+- (void)handleGesture:(UIPanGestureRecognizer *)panGesture
+{
+    CGPoint location = [panGesture locationInView:self.mainView];
+    
+    if (panGesture.state == UIGestureRecognizerStateBegan)
+    {
+        [self.mainView updateProfilePosition:location];
+    }
+    else if (panGesture.state == UIGestureRecognizerStateBegan || panGesture.state == UIGestureRecognizerStateChanged)
+    {
+        CGPoint translation = [(UIPanGestureRecognizer *)panGesture translationInView:self.mainView];
+        CGPoint newLocation = CGPointMake(location.x+translation.x, location.y+translation.y);
+        
+        [self.mainView updateProfilePosition:newLocation];
+    }
+    else if (panGesture.state == UIGestureRecognizerStateEnded)
+    {
+        //Do what you want
+    }
+}
+
+//- (void) handleGesture: (UITapGestureRecognizer *) tapGesture {
+//    
+//    CGPoint location = [tapGesture locationInView:self.mainView];
+//    
+//    [self.mainView updateProfilePosition:location];
+//    
+//}
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
     [self.mainView setup];
     [self.mainView addImageProfile:self];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+    [super viewDidDisappear:animated];
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

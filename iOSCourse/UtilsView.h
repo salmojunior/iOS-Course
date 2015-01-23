@@ -14,5 +14,6 @@
 - (void)setup;
 - (void)addImageProfile:(id<ProfileDelegate>)delegate;
 - (void)valueLabel:(NSString*)texto;
+- (void)updateProfilePosition:(CGPoint)position;
 
 @end

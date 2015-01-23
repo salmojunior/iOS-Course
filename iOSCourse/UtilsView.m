@@ -13,6 +13,7 @@
 @interface UtilsView()
 
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (nonatomic, strong) ProfileView *profileView;
 
 @end
 
@@ -29,13 +30,19 @@
     CGFloat y = (self.frame.size.height / 2) - 50;
     
     CGRect frame = CGRectMake(x, y, 100.0f, 100.0f);
-    ProfileView *profileView = [[ProfileView alloc] initWithFrame:frame];
+    self.profileView = [[ProfileView alloc] initWithFrame:frame];
     
-    profileView.delegate = delegate;
+    self.profileView.delegate = delegate;
     
-    [profileView cornerRadius:50];
-    [profileView addBorder:3.0f withBorderColor:[UIColor lightGrayColor]];
-    [self addSubview:profileView];
+    [self.profileView cornerRadius:50];
+    [self.profileView addBorder:3.0f withBorderColor:[UIColor lightGrayColor]];
+    [self addSubview:self.profileView];
+}
+
+- (void) updateProfilePosition: (CGPoint) position {
+    [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.profileView.center = position;
+    } completion:nil];
 }
 
 -(void)valueLabel:(NSString *)texto
